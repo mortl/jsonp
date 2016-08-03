@@ -1,0 +1,40 @@
+/*get_data(gh);
+    function get_data(url){
+    	fetch(url)
+    	  .then(function(resp){
+    	  	resp.json()
+    	  .then(function(data){
+    	  			console.log(data);
+    	  			var parsedJson = JSON.parse(data.offices);
+    	  			console.log(parsedJson);
+    	  			var offices = data.offices;
+    	  			console.log(offices);
+    	  			var officeLen = offices.length;
+    	  			
+    	  			for(var i = 0; i < officeLen; i++) {
+    	  				var departments = 
+    	  					offices[i].departments;
+    	  				console.log("Department Array",departments);
+    	  				
+    	  				//console.log(offices[i].departments)
+    	  			}
+    	  		});
+    	  });
+
+    }*/
+    /*get_data_es6(gh);
+    function get_data_es6(url){
+    	return fetch(url)
+    		.then(res => res.json())
+    		.then(json => json)
+    		.then(json => {
+    			
+    			var offices = json.offices;
+    			console.log(offices);
+    		})
+
+    }*/
+
+    // function rte_geo(json) {
+    //      console.log(json);
+    //  }

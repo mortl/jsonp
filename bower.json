@@ -1,0 +1,17 @@
+{
+  "name": "jsonp",
+  "authors": [
+    "mortl <martin.benes66@gmail.com>"
+  ],
+  "description": "testing promises with retrieving JSON",
+  "main": "app.js",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
