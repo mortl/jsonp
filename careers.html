@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .jb_link {
+        font-size: inherit !important;
+        padding: 0 !important;
+        color: #234f89 !important;
+        text-decoration: underline !important;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .careers-dept-list li a:hover {
+        /* background-color:#45a2bb;*/
+        background-color: #00cc99;
+    }
+    
+    .careers-dept-list li:nth-child(1) {
+        background-color: #234f89;
+    }
+    
+    .careers-dept-list li:nth-child(2) {
+        background-color: #003366;
+    }
+    
+    .careers-dept-list li:nth-child(3) {
+        background-color: #2cace2;
+    }
+    
+    .careers-dept-list li:nth-child(4) {
+        background-color: #2cace2;
+    }
+    
+    .careers-dept-list li:nth-child(5) {
+        background-color: #234f89;
+    }
+    
+    .careers-dept-list li:nth-child(6) {
+        background-color: #003366;
+    }
+    
+    .careers-dept-list li:nth-child(7) {
+        background-color: #003366;
+        width: 50%;
+    }
+    
+    .careers-dept-list li:nth-child(8) {
+        background-color: #2cace2;
+        width: 50%;
+    }
+    
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    .careers-dept-list li {
+        width: 33.3%;
+        float: left;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: 0.03em;
+    }
+    
+    .careers-dept-list li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .careers-dept li a {
+        color: #000;
+        font-size: 23px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        //font-family: Calibri;
+    }
+    
+    .careers-dept li a:hover {
+        color: #2cace2 !important;
+        text-decoration: underline !important;
+    }
+    
+    .careers-dept-listing {
+        width: 100%;
+        height: 625px;
+    }
+    
+    .careers-dept {
+        padding: 40px 70px;
+        max-width: 1164px;
+        margin: 0 auto;
+    }
+    
+    .careers-dept h2 {
+        color: #234f89;
+        font-size: 25px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        letter-spacing: 0.0em;
+    }
+    
+    #careers-torontoDT {
+        padding-top: 20px;
+        width: inherit;
+    }
+    
+    @media only screen and (max-width: 480px) {
+        .careers-dept-listing {
+            height: 640px;
+        }
+        .careers-dept-list li {
+            float: none;
+            width: 100%;
+            height: 130px;
+            line-height: 130px;
+            font-size: 18px;
+        }
+        .careers-dept {
+            padding: 25px 26px;
+        }
+        .careers-dept h2 {
+            margin-top: 7px;
+            margin-bottom: 12px;
+        }
+        .careers-dept-list li:nth-child(7) {
+            width: 100%;
+        }
+        .careers-dept-list li:nth-child(8) {
+            width: 100%;
+        }
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <ul class="clearfix careers-dept-list">
+        <li id="to"><a href="#14817" class="careers-design-tab">Toronto</a></li>
+        <li id="kw"><a href="#14819" class="careers-design-tab">Kitchener</a></li>
+        <li id="mtl"><a href="#14818" class="careers-design-tab">Montreal</a></li>
+        <li id="nyc"><a href="#14820" class="careers-design-tab">New York</a></li>
+        <li id="sf"><a href="#14822" class="careers-design-tab">San Francisco</a></li>
+        <li id="ldn"><a href="#14821" class="careers-design-tab">London</a></li>
+        <li id="la"><a href="#15207" class="careers-design-tab">Los Angeles</a></li>
+        <li id="ch"><a href="#15165" class="careers-design-tab">Chicago</a></li>
+    </ul>
+    <div class="careers-dept-listing">
+    </div>
+    <script>
+    $(document).ready(function() {
+
+        var chicagoId = '15165';
+        var kitchenerId = '14819';
+        var londonId = '14821';
+        var losAngelesId = '15207';
+        var montrealId = '14818';
+        var newYorkId = '14820';
+        var sanfranId = '14822';
+        var toDowntownId = '14817';
+        var toMidtownId = '14816';
+
+
+        $('.careers-dept-listing').hide();
+        loadData();
+
+        $('#to').click(function() {
+
+            $('.careers-dept-listing').show();
+            $('#' + toMidtownId).show();
+            $('#' + toDowntownId).show();
+            $('#' + kitchenerId).hide();
+            $('#' + montrealId).hide();
+            $('#' + newYorkId).hide();
+            $('#' + sanfranId).hide();
+            $('#' + londonId).hide();
+            $('#' + losAngelesId).hide();
+            $('#' + chicagoId).hide();
+        });
+
+        $('#kw').click(function() {
+            $('.careers-dept-listing').show();
+            $('#' + kitchenerId).show();
+            $('#' + toMidtownId).hide();
+            $('#' + montrealId).hide();
+            $('#' + newYorkId).hide();
+            $('#' + sanfranId).hide();
+            $('#' + londonId).hide();
+            $('#' + losAngelesId).hide();
+            $('#' + chicagoId).hide();
+            $('#' + toDowntownId).hide();
+        });
+        $('#mtl').click(function() {
+            $('.careers-dept-listing').show();
+
+            $('#' + montrealId).show();
+            $('#' + kitchenerId).hide();
+            $('#' + toMidtownId).hide();
+            $('#' + newYorkId).hide();
+            $('#' + sanfranId).hide();
+            $('#' + londonId).hide();
+            $('#' + losAngelesId).hide();
+            $('#' + chicagoId).hide();
+            $('#' + toDowntownId).hide();
+        });
+        $('#nyc').click(function() {
+            $('.careers-dept-listing').show();
+
+            $('#' + newYorkId).show();
+            $('#' + montrealId).hide();
+            $('#' + kitchenerId).hide();
+            $('#' + toMidtownId).hide();
+            $('#' + toDowntownId).hide();
+            $('#' + sanfranId).hide();
+            $('#' + londonId).hide();
+            $('#' + losAngelesId).hide();
+            $('#' + chicagoId).hide();
+
+        });
+        $('#sf').click(function() {
+            $('.careers-dept-listing').show();
+
+            $('#' + sanfranId).show();
+            $('#' + newYorkId).hide();
+            $('#' + montrealId).hide();
+            $('#' + kitchenerId).hide();
+            $('#' + toMidtownId).hide();
+            $('#' + toDowntownId).hide();
+
+
+            $('#' + londonId).hide();
+            $('#' + losAngelesId).hide();
+            $('#' + chicagoId).hide();
+        });
+        $('#ldn').click(function() {
+            $('.careers-dept-listing').show();
+            $('#' + londonId).show();
+            $('#' + sanfranId).hide();
+            $('#' + newYorkId).hide();
+            $('#' + montrealId).hide();
+            $('#' + kitchenerId).hide();
+            $('#' + toMidtownId).hide();
+            $('#' + toDowntownId).hide();
+            $('#' + losAngelesId).hide();
+            $('#' + chicagoId).hide();
+        });
+        $('#la').click(function() {
+            $('.careers-dept-listing').show();
+            $('#' + losAngelesId).show();
+            $('#' + londonId).hide();
+            $('#' + sanfranId).hide();
+            $('#' + newYorkId).hide();
+            $('#' + montrealId).hide();
+            $('#' + kitchenerId).hide();
+            $('#' + toMidtownId).hide();
+            $('#' + toDowntownId).hide();
+            $('#' + chicagoId).hide();
+        });
+        $('#ch').click(function() {
+            $('.careers-dept-listing').show();
+            $('#' + chicagoId).show();
+            $('#' + losAngelesId).hide();
+            $('#' + londonId).hide();
+            $('#' + sanfranId).hide();
+            $('#' + newYorkId).hide();
+            $('#' + montrealId).hide();
+            $('#' + kitchenerId).hide();
+            $('#' + toMidtownId).hide();
+            $('#' + toDowntownId).hide();
+
+
+        });
+    });
+
+
+
+    function loadData() {
+        var gh = "https://api.greenhouse.io/v1/boards/indexexchange/offices";
+        $.ajax({
+                url: gh,
+
+                dataType: 'json',
+
+            })
+            .done(function(data) {
+
+                checkData(data);
+
+            })
+            .fail(function(err) {
+                console.log("error", err);
+            })
+            .always(function() {
+                console.log("complete");
+            });
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function checkData(data) {
+        var offices = data.offices;
+
+        offices = offices.filter(function(office) {
+
+            if (office.name !== "No Office") {
+                return office.name;
+            }
+        });
+
+
+
+
+        offices.forEach(function(office) {
+            //    console.log(office);
+
+            var departments = office.departments;
+            $('.careers-dept-listing').append($('<ul>').attr("id", office.id.toString()).addClass('careers-dept'));
+            $('#' + office.id.toString()).append($('<h1>').text(office.name));
+            var flag = 0;
+            departments.forEach(function(dept) {
+
+
+
+                if (dept.name !== "No Department" && dept.jobs.length !== 0) {
+                    //console.log(dept);
+
+                    $('#' + office.id.toString()).append($('<h2>').text(dept.name).addClass(dept.id));
+                    var deptArr = dept;
+                    //console.log(deptArr);
+                    var jobs = dept.jobs;
+
+
+                    jobs.forEach(function(job) {
+                        flag = 1;
+
+                        $('#' + office.id.toString()).append($('<li>').append($('<a>').text(job.title).attr("href", job.absolute_url)));
+
+                        // console.log(job);
+                    });
+                }
+            });
+            if (!flag) {
+                $('#' + office.id.toString()).append($('<li>').text('There are no jobs for this location'));
+            }
+
+
+        });
+
+
+    }
+    </script>
+</body>
+
+</html>
