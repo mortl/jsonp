@@ -20,16 +20,16 @@ module.exports = {
         filename: 'app.bundle.js'
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin({
+        // new webpack.optimize.UglifyJsPlugin({
             
 
-            output: {
-                comments: false
-            }
+        //     output: {
+        //         comments: false
+        //     }
 
 
 
-        })
+        // })
 
     ]
 
