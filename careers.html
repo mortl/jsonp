@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <script src="smooth-scroll.js" type="text/javascript" ></script>
     <style>
     ul {
         list-style-type: none;
@@ -154,20 +155,20 @@
 
 <body>
     <ul class="clearfix careers-dept-list">
-        <li id="to"><a href="#14817" class="careers-design-tab">Toronto</a></li>
-        <li id="kw"><a href="#14819" class="careers-design-tab">Kitchener</a></li>
-        <li id="mtl"><a href="#14818" class="careers-design-tab">Montreal</a></li>
-        <li id="nyc"><a href="#14820" class="careers-design-tab">New York</a></li>
-        <li id="sf"><a href="#14822" class="careers-design-tab">San Francisco</a></li>
-        <li id="ldn"><a href="#14821" class="careers-design-tab">London</a></li>
-        <li id="la"><a href="#15207" class="careers-design-tab">Los Angeles</a></li>
-        <li id="ch"><a href="#15165" class="careers-design-tab">Chicago</a></li>
+        <li id="to"><a data-scroll href="#14817" class="careers-design-tab">Toronto</a></li>
+        <li id="kw"><a data-scroll href="#14819" class="careers-design-tab">Kitchener</a></li>
+        <li id="mtl"><a data-scroll href="#14818" class="careers-design-tab">Montreal</a></li>
+        <li id="nyc"><a data-scroll href="#14820" class="careers-design-tab">New York</a></li>
+        <li id="sf"><a data-scroll href="#14822" class="careers-design-tab">San Francisco</a></li>
+        <li id="ldn"><a data-scroll href="#14821" class="careers-design-tab">London</a></li>
+        <li id="la"><a data-scroll href="#15207" class="careers-design-tab">Los Angeles</a></li>
+        <li id="ch"><a data-scroll href="#15165" class="careers-design-tab">Chicago</a></li>
     </ul>
     <div class="careers-dept-listing">
     </div>
     <script>
     $(document).ready(function() {
-
+        smoothScroll.init();
         var chicagoId = '15165';
         var kitchenerId = '14819';
         var londonId = '14821';
