@@ -1,7 +1,18 @@
 
+
+(function () {
+     /* Particle Library */
+     /*window.onload = function(){
+        Particles.init({
+            selector:'#myCanvas',
+            maxParticles:300,
+            sizeVariations:5,
+            speed:0.9,
+            minDistance:200
+        });
+     };
+*/
 var gh = "https://api.greenhouse.io/v1/boards/indexexchange/offices";
-
-
 
 
 
@@ -71,3 +82,4 @@ function checkData(data) {
 
 
 }
+})(); 
